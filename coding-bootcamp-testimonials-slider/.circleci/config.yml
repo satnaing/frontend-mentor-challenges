@@ -1,0 +1,47 @@
+version: 2.1
+# Uncomment the line 3 and 4 to use codecov for CodeCoverage Report
+# orbs:
+#   codecov: codecov/codecov@1.2.3
+jobs:
+  build:
+    docker:
+      - image: cimg/node:15.1
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
+      - run:
+          name: install packages
+          command: npm ci
+      - save_cache:
+          key: node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
+          paths:
+            - ~/.npm
+      - run:
+          name: "Build the app"
+          command: npm run build
+  # codecov:
+  #   docker:
+  #     - image: cimg/node:15.1
+  #   steps:
+  #     - checkout
+  #     - restore_cache:
+  #         keys:
+  #           - node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
+  #     - run:
+  #         name: install packages
+  #         command: npm ci
+  #     - save_cache:
+  #         key: node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
+  #         paths:
+  #           - ~/.npm
+  #     - run: npm test -- --coverage
+  #     - codecov/upload
+
+workflows:
+  version: 2
+  main-workflow:
+    jobs:
+      - build
+      # - codecov
