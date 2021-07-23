@@ -1,9 +1,9 @@
 /* ========== Layouts ========== */
 body {
-  font-family: $body-font;
+  font-family: var(--font-type);
   font-size: var(--normal-font-size);
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--dark-blue);
   line-height: 1.5;
 }
 
@@ -37,21 +37,21 @@ body {
 }
 
 /* ========== Buttons ========== */
-.btn {
-  background-color: var(--blue);
-  color: var(--white);
-  font-family: $heading-font;
-  font-size: var(--btn-font-size);
-  font-weight: $font-bold;
-  border: none;
-  padding: 1rem 4.5rem;
-  border-radius: 3rem;
-  cursor: pointer;
-  transition: background-color 0.7s;
+// .btn {
+//   background-color: var(--blue);
+//   color: var(--white);
+//   font-family: $heading-font;
+//   font-size: var(--btn-font-size);
+//   font-weight: $font-bold;
+//   border: none;
+//   padding: 1rem 4.5rem;
+//   border-radius: 3rem;
+//   cursor: pointer;
+//   transition: background-color 0.7s;
 
-  margin: 1rem auto;
+//   margin: 1rem auto;
 
-  &:hover {
-    background-color: var(--cyan);
-  }
-}
+//   &:hover {
+//     background-color: var(--cyan);
+//   }
+// }

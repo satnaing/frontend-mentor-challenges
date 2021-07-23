@@ -1,41 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
 
 /* ========== Variables ========== */
 :root {
   // Colors
-  --primary-color-light: hsl(217, 28%, 15%);
-  --primary-color: hsl(218, 28%, 13%);
-  --primary-color-dark: hsl(216, 53%, 9%);
-  --dark-blue: hsl(219, 30%, 18%);
-  --cyan: hsl(176, 68%, 64%);
-  --blue: hsl(198, 60%, 50%);
-  --red: hsl(0, 100%, 63%);
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
   --white: hsl(0, 0%, 100%);
 
   // Fonts
-  --h1: 1.625rem;
-  --h2: 1.25rem;
-  --h3: 0.813rem;
-  --btn-font-size: 0.938rem;
+  --normal-font-size: 1.125rem; // 18px
+  --heading-font-size: 0.938rem; // 15px
 
-  --big-font-size: 1.063rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.875rem;
-  --smaller-font-size: 0.688rem;
-  --tiny-font-size: 0.55rem;
+  --font-normal: 300;
+  --font-medium: 500;
+  --font-bold: 700;
+
+  --font-type: "Inter", sans-serif;
 }
 
 // Screen Sizes
 $tablet: 576px;
 $laptop: 768px;
 $desktop: 1280px;
-$nav-height: 70px;
-$z-index-nav: 10;
-
-// Fonts & Typography
-$body-font: "Open Sans", sans-serif;
-$heading-font: "Raleway", sans-serif;
-$font-bold: 700;
 
 /* ========== Media Query Mixins ========== */
 @mixin tablet {
