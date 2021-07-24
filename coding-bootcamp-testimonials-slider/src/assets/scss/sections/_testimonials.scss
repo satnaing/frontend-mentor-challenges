@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.slide-grid {
+  justify-content: center;
+}
+
 .testimonials {
   &__container {
     justify-items: center;
@@ -14,6 +18,7 @@
   }
 
   &__image-container {
+    margin: auto;
     width: 100%;
     max-width: 325px;
     padding: 2rem;
@@ -74,23 +79,41 @@
   }
 }
 
-@include tablet {
+@include laptop {
+  .slide-grid {
+    align-items: center;
+    grid-template-columns: repeat(8, 1fr);
+  }
   .testimonials {
-    &__container {
-      align-items: center;
-      grid-template-columns: repeat(8, 1fr);
-    }
-
     &__image-container {
+      max-width: 90%;
+      padding: 3rem;
+      text-align: center;
+
       grid-row: 1 / 2;
-      grid-column: 4 / 8;
+      grid-column: 4 / 9;
+
+      &-bg {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &__data {
       position: relative;
+      text-align: left;
+      max-width: 100%;
+      padding: 0 4rem;
       z-index: 1;
       grid-row: 1 / 2;
-      grid-column: 1 / 5;
+      grid-column: 1 / 6;
+
+      &-bg {
+        width: auto;
+        left: 30%;
+      }
     }
   }
 }
