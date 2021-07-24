@@ -1,13 +1,12 @@
-// import Swiper JS
-import Swiper from "swiper";
-// import Swiper styles
+// import Swiper from "swiper";
+import Swiper from "./swiper-bundle.min.js";
 import "swiper/swiper-bundle.css";
 
 var swiper = new Swiper(".mySwiper", {
   cssMode: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-btn-next",
+    prevEl: ".swiper-btn-prev",
   },
   pagination: {
     el: ".swiper-pagination",
